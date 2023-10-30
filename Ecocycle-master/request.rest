@@ -1,0 +1,68 @@
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMzY2FmNTNjLTc0YmUtNDBiMi05ZTMyLTIxNDJlYzczODQ3NSIsIm5hbWUiOiJtYXVsYW5hIiwiZW1haWwiOiJtYXVsYW5hQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjk4NjI5Njk4LCJleHAiOjE2OTg2MzMyOTh9.SB8vmWmLVk2bQ861YaWji-KhlYpZvbV2wfBn4yt_saQ
+###
+GET http://127.0.0.1:5000/blog
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "nik": "35516636551",
+    "name": "maulana",
+    "email": "maulana@gmail.com",
+    "password": "admin123",
+    "confPassword": "admin123",
+    "role": ""
+}
+
+###
+POST http://localhost:5000/admin
+Content-Type: application/json
+
+{
+    "name": "Muhammad Fadli",
+    "email": "iwan@gmail.com",
+    "password": "admin123",
+    "confPassword": "admin123",
+    "role": ""
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "name": "maulana",
+    "password": "admin123"
+}
+
+###
+POST http://localhost:5000/forgot
+Content-Type: application/json
+
+{
+    "email": "iwan@gmail.com"
+}
+
+###
+POST http://localhost:5000/reset
+Content-Type: application/json
+
+{
+    "token": "ab11761c94e2bb40f55d3dda7a7612792dfd0f53",
+    "newPassword": "123"
+}
+
+###
+DELETE http://localhost:5000/logout
+
+###
+POST http://localhost:5000/pengajuan
+Content-Type: application/json
+
+{
+    "nik" : "35516636551",
+    "name": "Muhammad fadli",
+    "alamat": "jalan sabangan"
+}
